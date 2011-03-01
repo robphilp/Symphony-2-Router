@@ -1,9 +1,9 @@
 ## URL Router ##
 
-Version: 0.4
+Version: 0.5
 Author: [Rob Philp](robert.h.philp@gmail.com)  
-Build Date: 2010-08-31  
-Requirements: Symphony 2.0.7  
+Build Date: 2011-03-01  
+Requirements: Symphony 2.2  
 
 ### Installation ###
 
@@ -16,6 +16,10 @@ Requirements: Symphony 2.0.7
 ### Notes ###
 
 ### Changelog ###
+
+0.5 ([Max Wheeler](http://makenosound.com)):
+
+* Compatibility with Symphony 2.2 duplicators
 
 0.4:
 
