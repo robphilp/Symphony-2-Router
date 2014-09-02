@@ -94,14 +94,14 @@
 		public function addCustomPreferenceFieldsets($context){
 			$fieldset = new XMLElement('fieldset');
 			$fieldset->setAttribute('class', 'settings');
-			$fieldset->appendChild(new XMLElement('legend', 'Regex URL re-routing'));
-
-			$p = new XMLElement('p', 'Define regex rules for URL re-routing', array('class', 'help'));
+			$fieldset->appendChild(new XMLElement('legend', 'URL Router'));
+			
+			$p = new XMLElement('p', 'Define regular expression rules for URL routing', array('class' => 'help'));
 			$fieldset->appendChild($p);
 
 			$group = new XMLElement('div');
 			$group->setAttribute('class', 'subsection');
-			$group->appendChild(new XMLElement('p', __('URL Schema Rules'), array('class' => 'label')));
+			$group->appendChild(new XMLElement('p', __('Rules'), array('class' => 'label')));
 
 			$ol = new XMLElement('ol');
 			$ol->setAttribute('id', 'router-duplicator');
@@ -164,7 +164,7 @@
 
 			$label = Widget::Label();
 			$input = Widget::Input('settings[router][redirect]', 'yes', 'checkbox');
-			if($this->_Parent->Configuration->get('redirect', 'router') == 'yes') $input->setAttribute('checked', 'checked');
+			if(Symphony::Configuration()->get('redirect', 'router') == 'yes') $input->setAttribute('checked', 'checked');
 			$label->setValue($input->generate() . ' ' . __('Redirect legacy URLs to new destination'));
 			$fieldset->appendChild($label);
 
